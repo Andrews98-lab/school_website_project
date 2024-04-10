@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="icon" type="icon" href="images\icon.png">
+    <link rel="stylesheet" type="text/css" href="css\appform.css">
+    </head>
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1{
+            color: #fff;
+            margin-left: 50px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        header h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+        
+        header img{
+            height: 90px;
+        }
+        header {
+              background-color: #002147;
+              color: #fff;
+              padding: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 90px;
+            }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        /* Style the dropdown button */
+        .dropdown-btn {
+            background-color: #002147;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          /* Dropdown button on hover & focus */
+        .dropdown-btn:hover, .dropdown-btn:focus {
+            background-color: #3e8e41;
+          }
+          
+          /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+          
+          /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+          
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+            background-color: #002147;
+        }
+          
+          /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Output Styles */
+        #output {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        #output p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #002147;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 0; /* Remove default margin */
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .social a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .social a:hover {
+            color: blue;
+        }
+
+        #footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #footer-links a:hover {
+            color: blue;
+    </style>
+<body>
+    <header>
+        <h1>UNIVERSITY OF HEALTH SCIENCES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Admission</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#admissions">Undergraduate</a>
+                        <a href="index.html#admissions">Graduate</a>
+                    </div>
+                </li>
+                <li><a href="hostel.html">Hostel</a></li>
+                <li><a href="review.html">Review</a></li>
+            </ul>
+        </nav>
+        <div><img src="images\badge_two.png"></div> 
+        <script>
+        // Function to toggle the display of dropdown content
+        function toggleDropdown(dropdown) {
+            var dropdownContent = dropdown.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        // Adding event listeners to dropdown buttons
+        var dropdownButtons = document.querySelectorAll('.dropdown button');
+        dropdownButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                toggleDropdown(this);
+            });
+        });
+    </script>
+    </header>
+
+    <h2>ADMISSION APPLICATION FORM</h2>
+    <form action="afterapp.html" method="GET">
+        <h3>Personal Information</h3>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="sname">Surname</label>
+        <input type="text" id="sname" name="sname" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required max="2005-12-31" min="1984-12-31"><br><br>
+
+        <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select><br><br>
+
+    <h3>Educational Information</h3>
+    <label for="qualification">Highest Qualification</label>
+    <input type="text" id="qualification" name="qualification" required><br><br>
+
+    <label for="institute">Institute/School:</label>
+    <input type="text" id="institute" name="institute" required><br><br>
+
+    <label for="year">Year of study</label>
+    <input type="number" id="year" name="year" required><br><br>
+
+    <h3>Program Selection</h3>
+    <label for="program">Program:</label>
+    <select id="program" name="program" required>
+        <option value="">Select</option>
+        <option value="Bachelor">Bachelor</option>
+        <option value="Master">Master</option>
+        <option value="PhD">PhD</option>
+    </select><br><br>
+
+    <label for="major">Major</label>
+    <select id="major" name="major" required><br><br>
+        <option>None</option>
+        <option>Bachelor of Science Health Information Management</option>
+        <option>Bachelor of science Medicine and Bachelor of Surgery</option>
+        <option>Bachelor of Science Nursing</option>
+        <option>Bachelor of Science</option>
+    </select><br><br>
+
+    <h3>Additional Information</h3>
+    <label for="essay">Motivational Stament</label><br>
+    <textarea id="essay" name="essay" rows="4" cols="100" required placeholder="what your motivation for applying. not more than 300 words "max="300" min="50"></textarea><br><br>
+
+    <label for="cv">Upload CV in pdf</label>
+    <input type="file" id="cv" name="cv" accept=".pdf"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+    <footer id="page-footer">
+            <div>
+                <h2>Connect with us</h2>
+                <ul class="social">
+                    <li><a class="youtube" href="https://www.youtube.com/channel/UCZZJK0YyjaHlEiNIGAS7FfQ">YouTube</a></li>
+                    <li><a class="twitter" href="https://twitter.com/@anero_calculus">Twitter</a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/andresanero.decalculus/">Facebook</a></li>
+                    <li><a class="tiktok" href="https://www.tiktok.com/@universityhealthsciences">TikTok</a></li>
+                    <li><a class="linkedin" href="https://linkedin.com/in/andrews-baidoo-b32272209">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div id="footer-links">
+            <ul>
+                <li class="copyright">© University of Health Sciences 2024</li>
+                <li><a href="mailto:info@uhs.edu">Contact us</a></li>
+                <li><a href="#www.uhs.edu.com/privacy-policy">Privacy policy</a></li>
+                <li><a href="#cookie-settings">Cookie settings</a></li>
+                <li><a href="#www.uhs.edu.com/accessibility">Accessibility Statement</a></li>
+                <li><a href="index.html">Back To Top</li>
+                <li><a href="team.html">Board</li>
+            </ul>
+            </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Program Price Calculator</title>
+    <link rel="stylesheet" href="css/fee.css">
+    <link rel="icon" type="text/css" href="images\icon.png">
+</head>
+<body>
+   <div id="text">
+    <h1>Study Program Price Calculator</h1>
+    <form id="studyForm">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="name" required>
+        <label for="sname">Surname:</label>
+        <input type="text" id="sname" name="name" required>
+        <label for="ID">Index Number:</label>
+        <input type="text" id="ID" name="ID" required>
+
+        <!-- Program -->
+        <label for="program">Program of Study:</label>
+        <select id="program" name="program">
+            <option value="HIM">Health Information Management</option>
+            <option value="CN">Clinical Nutrition & Dietetics</option>
+            <option value="PA">Physician Assistantship</option>
+            <option value="Med">Medicine</option>
+            <option value="Nur">Nursing</option>
+            <option value="SS">Sport Science</option>
+            <option value="MLS">Medical Laboratory Science</option>
+            <option value="OPT">Optometry</option>
+        </select>
+        <!-- Hall of Affiliation -->
+        <label for="HA">Hall of Affiliation:</label>
+        <select id="HA" name="HA">
+            <option value="OGUAA">OGUAA Hall</option>
+            <option value="SRC">SRC</option>
+            <option value="Valco">Valco</option>
+            <option value="Casford">Casford</option>
+            <option value="ATL">ATL</option>
+            <option value="Adheye">Adheye</option>
+            <option value="KNH">KNH</option>
+            <option value="Supernuation">Supernuation</option>
+        </select>
+        
+        <input type="submit" value="Check Out">
+    </form>
+    </div>
+
+    <script>
+        // Function to calculate the amount owed
+        function calculateAmount() {
+            var program = document.getElementById("program").value;
+            var hall = document.getElementById("HA").value;
+            var amount = 0;
+
+            // Define prices for each program and hall
+            var programPrices = {
+                "HIM": 1000,
+                "CN": 1200,
+                "PA": 1100,
+                "Med": 1500,
+                "Nur": 1300,
+                "SS": 1000,
+                "MLS": 1400,
+                "OPT": 1600
+            };
+
+            var hallPrices = {
+                "OGUAA": 200,
+                "SRC": 250,
+                "Valco": 220,
+                "Casford": 240,
+                "ATL": 230,
+                "Adheye": 210,
+                "KNH": 270,
+                "Supernuation": 260
+            };
+
+            // Calculate the total amount owed
+            amount = programPrices[program] + hallPrices[hall];
+
+            // Display the result in an alert
+            alert("Total Amount Owed: $" + amount);
+        }
+
+        // Attach the calculateAmount function to the form submission event
+        document.getElementById("studyForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            calculateAmount(); // Calculate the amount owed and show in an alert
+        });
+    </script>
+</body>
+</html>

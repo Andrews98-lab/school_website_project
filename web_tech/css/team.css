@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(140, 217, 240);
+    overflow-x: hidden;
+}
+.organogram {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(140, 217, 240);
+    padding: 70px;
+   
+}
+.member {
+    text-align: center;
+}
+.member img {
+    width: 250px;
+    height: 250px;
+    border-radius: 80%;
+    border: 4px double #fff;
+}
+img{
+    width: 50%;
+    border: 2px solid bisque;
+}

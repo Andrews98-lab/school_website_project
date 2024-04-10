@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <link rel="stylesheet" href="css\review.css">
+    <link rel="icon" type="text/css" href="images\icon.png">
+</head>
+<body>
+    <header>
+        <h1>UNIVERSITY OF HEALTH SCIENCES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Admission</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#admissions">Undergraduate</a>
+                        <a href="index.html#admissions">Graduate</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Apply</button>
+                    <div class="dropdown-content">
+                        <a href="login.html">Undergraduate</a>
+                        <a href="login.html">Graduate</a>
+                    </div>
+                </li>
+                <li><a href="fee.html">Fee</a></li>
+            </ul>
+        </nav>
+        <div><img src="images\badge_two.png"></div> 
+        <script>
+        // Function to toggle the display of dropdown content
+        function toggleDropdown(dropdown) {
+            var dropdownContent = dropdown.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+
+        // Adding event listeners to dropdown buttons
+        var dropdownButtons = document.querySelectorAll('.dropdown button');
+        dropdownButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                toggleDropdown(this);
+            });
+        });
+    </script>
+    </header>
+    <h1>Student Review </h1>
+    <form id="review-form" action="#" method="post">
+        <div>
+            <h2>Course Review</h2>
+            <label for="course-name">Course Name</label>
+            <select name="course-name" id="course-name">
+                <option value="Anatomy">Anatomy</option>
+                <option value="Physiology">Physiology</option>
+                <option value="Health">Health Informatics</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Pathology">Pathology</option>
+                <option value="Food Science">Food Science</option>
+                <option value="Health policy">Health policy</option>
+                <option value="Health Care level">Health Care level </option>
+                <option value="Biochemistry">Biochemistry</option>
+                <option value="Others">Others</option>
+            </select><br><br>
+
+            <label for="course-rating">Rating</label>
+            <input type="number" name="course-rating" id="course-rating" min="1" max="5" placeholder="Rate from 1-5"><br><br>
+
+            <label for="course-review">Review</label><br>
+            <textarea name="course-review" id="course-review" rows="4" cols="50"></textarea><br><br>
+        </div>
+        <div>
+            <h2>Professor Review</h2>
+            <label for="professor-name">Professor Name</label>
+            <input type="text" name="professor-name" id="professor-name"><br><br>
+
+            <label for="professor-rating">Rating</label>
+            <input type="number" name="professor-rating" id="professor-rating" min="1" max="5" placeholder="Rate from 1-5"><br><br>
+
+            <label for="professor-review">Review</label><br>
+            <textarea name="professor-review" id="professor-review" rows="4" cols="50"></textarea><br><br>
+        </div>
+        <div>
+            <h2>Overall University Experience</h2>
+            <label for="overall-rating">Rating</label>
+            <input type="number" name="overall-rating" id="overall-rating" min="1" max="5"><br><br>
+
+            <label for="overall-review">Review</label><br>
+            <textarea name="overall-review" id="overall-review" rows="4" cols="50"></textarea><br><br>
+
+            <h2>Additional Comments or Feedback</h2>
+            <textarea name="additional-comments" id="additional-comments" rows="4" cols="50"></textarea><br><br>
+        </div>
+
+            <input type="submit" value="Submit Review">
+    </form>
+
+    <div id="reviewed-comments">
+        <h2>Already Reviewed Comments</h2>
+        <div>
+            <p><strong>Course Review</strong> Anatomy</p>
+            <p><strong>Rating:</strong> 4</p>
+            <p><strong>Review:</strong> The course content was comprehensive and well-structured. However, the pace was a bit fast for my liking.</p>
+            <hr>
+            <p><strong>Professor Review:</strong> Dr. Smith</p>
+            <p><strong>Rating:</strong> 5</p>
+            <p><strong>Review:</strong> Dr. Smith is an excellent professor who is knowledgeable and approachable. I enjoyed his lectures immensely.</p>
+            <hr>
+            <p><strong>Overall University Experience:</strong></p>
+            <p><strong>Rating:</strong> 4</p>
+            <p><strong>Review:</strong> My experience at the University of Health Science has been positive overall. The facilities are modern, and the staff is helpful.</p>
+            <hr>   
+        </div>  
+    </div>
+
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get form values
+            var courseName = document.getElementById('course-name').value;
+            var courseRating = document.getElementById('course-rating').value;
+            var courseReview = document.getElementById('course-review').value;
+
+            // Construct review HTML
+            var reviewHTML = '<p><strong>Course Review:</strong> ' + courseName + '</p>';
+            reviewHTML += '<p><strong>Rating:</strong> ' + courseRating + '</p>';
+            reviewHTML += '<p><strong>Review:</strong> ' + courseReview + '</p>';
+            
+            // Create a new div to hold the review
+            var reviewDiv = document.createElement('div');
+            reviewDiv.innerHTML = reviewHTML;
+
+            // Add the review to the "Already Reviewed Comments" section
+            document.getElementById('reviewed-comments').querySelector('div').appendChild(reviewDiv);
+
+            // Clear form fields
+            document.getElementById('review-form').reset();
+        });
+    </script>
+    <footer id="page-footer">
+        <div>
+            <h2>Connect with us</h2>
+            <ul class="social">
+                <li><a class="youtube" href="https://www.youtube.com/channel/UCZZJK0YyjaHlEiNIGAS7FfQ">YouTube</a></li>
+                <li><a class="twitter" href="https://twitter.com/@anero_calculus">Twitter</a></li>
+                <li><a class="facebook" href="https://www.facebook.com/andresanero.decalculus/">Facebook</a></li>
+                <li><a class="tiktok" href="https://www.tiktok.com/@universityhealthsciences">TikTok</a></li>
+                <li><a class="linkedin" href="https://linkedin.com/in/andrews-baidoo-b32272209">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li class="copyright">© University of Health Sciences 2024</li>
+                <li><a href="mailto:info@uhs.edu">Contact us</a></li>
+                <li><a href="#www.uhs.edu.com/privacy-policy">Privacy policy</a></li>
+                <li><a href="#cookie-settings">Cookie settings</a></li>
+                <li><a href="#www.uhs.edu.com/accessibility">Accessibility Statement</a></li>
+                <li><a href="index.html">Back To Top</li>
+                <li><a href="team.html">Board</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

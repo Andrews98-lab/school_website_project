@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Health Science</title>
+    <link rel="icon" type="icon" href="images\icon.png">
+    <link rel="stylesheet" href="css\sum.css">
+    
+</head>
+<body>
+     <header>
+        <h1>UNIVERSITY OF HEALTH SCIENCES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Admission</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#admissions">Undergraduate</a>
+                        <a href="index.html#admissions">Graduate</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Apply</button>
+                    <div class="dropdown-content">
+                        <a href="login.html">Undergraduate</a>
+                        <a href="login.html">Graduate</a>
+                    </div>
+                </li>
+                <li><a href="review.html">Review</a></li>
+            </ul>
+        </nav>
+        <div><img src="images\badge_two.png"></div> 
+    </header>
+    <h1>Tution and Hall Fees</h1>
+    <div id="summary">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Surname:</strong> <span id="surname"></span></p>
+        <p><strong>Index Number:</strong> <span id="indexNumber"></span></p>
+        <p><strong>Program of Study:</strong> <span id="program"></span></p>
+        <p><strong>Hall of Affiliation:</strong> <span id="hall"></span></p>
+        <p><strong>Program Fee:</strong> Ghana &#8373<span id="programFee"></span></p>
+        <p><strong>Hall Fee:</strong> Ghana &#8373<span id="hallFee"></span></p>
+        <p><strong>Total Amount Owed:</strong> Ghana &#8373<span id="totalAmount"></span></p>
+    </div>
+
+    <script>
+        // Retrieve data from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('fname');
+        const surname = urlParams.get('sname');
+        const indexNumber = urlParams.get('ID');
+        const program = urlParams.get('program');
+        const hall = urlParams.get('HA');
+
+        // Retrieve program and hall fees
+        const programPrices = {
+            "Health Information Management": 2300,
+            "Clinical Nutrition & Dietetics": 2600,
+            "Physician Assistantship": 3000,
+            "Medicine": 4500,
+            "Nursing": 1300,
+            "Sport Science": 2400,
+            "Medical Laboratory Science": 2000,
+            "Optometry": 2300
+        };
+
+        const hallPrices = {
+            "OGUAA": 680,
+            "SRC": 900,
+            "Valco": 720,
+            "Casford": 800,
+            "ATL": 750,
+            "Adheye": 780,
+            "KNH": 750,
+            "Supernuation": 950
+        };
+
+        const programFee = programPrices[program];
+        const hallFee = hallPrices[hall];
+        const totalAmount = programFee + hallFee;
+
+        // Display data in the HTML
+        document.getElementById('name').innerText = name;
+        document.getElementById('surname').innerText = surname;
+        document.getElementById('indexNumber').innerText = indexNumber;
+        document.getElementById('program').innerText = program;
+        document.getElementById('hall').innerText = hall;
+        document.getElementById('programFee').innerText = programFee;
+        document.getElementById('hallFee').innerText = hallFee;
+        document.getElementById('totalAmount').innerText = totalAmount;
+    </script>
+ <footer>
+        <div>
+            <h2>Connect with us</h2>
+            <ul class="social">
+                <li><a class="youtube" href="https://www.youtube.com/channel/UCZZJK0YyjaHlEiNIGAS7FfQ">YouTube</a></li>
+                <li><a class="twitter" href="https://twitter.com/@anero_calculus">Twitter</a></li>
+                <li><a class="facebook" href="https://www.facebook.com/andresanero.decalculus/">Facebook</a></li>
+                <li><a class="tiktok" href="https://www.tiktok.com/@universityhealthsciences">TikTok</a></li>
+                <li><a class="linkedin" href="https://linkedin.com/in/andrews-baidoo-b32272209">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li class="copyright">© University of Health Sciences 2024</li>
+                <li><a href="mailto:info@uhs.edu">Contact us</a></li>
+                <li><a href="#www.uhs.edu.com/privacy-policy">Privacy policy</a></li>
+                <li><a href="#cookie-settings">Cookie settings</a></li>
+                <li><a href="#www.uhs.edu.com/accessibility">Accessibility Statement</a></li>
+                <li><a href="index.html">Back To Top</li>
+                <li><a href="team.html">Board</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

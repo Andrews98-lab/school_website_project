@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>www.uhs.edu.com</title>
+	<link rel="stylesheet" href="css\index.css">
+	<link rel="icon" type="text/css" href="images\icon.png">
+</head>
+<body>
+	<!-- header -->
+	<header>
+        <div>
+		<h1>UNIVERSITY OF HEALTH SCIENCES</h1>
+        	<nav>
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+                	<li><a href="#about">About Us</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropdown-btn">Academics</button>
+                        <div class="dropdown-content">
+                            <a href="#academics">School of Medical Science</a>
+                            <a href="#academics">School of Allied Health</a>
+                            <a href="#academics">School of technological Health</a>
+                        </div>
+                        </div></li>
+                	<li><div class="dropdown">
+                        <button class="dropdown-btn">Admission</button>
+                        <div class="dropdown-content">
+                            <a href="#admissions">Under Graduate</a>
+                            <a href="#admissions">Graduate</a>
+                            <a href="afterapp.html">Admission Status</a>
+                        </div>
+                        </div>
+                    </li>
+                        <li><div class="dropdown">
+                        <button class="dropdown-btn">Apply</button>
+                        <div class="dropdown-content">
+                            <a href="login.html">Under Graduate</a>
+                            <a href="login.html">Graduate</a>
+                        </div>
+                        </div></li>
+                	<li><a href="review.html">Review</a></li>
+                	<li><a href="hostel.html">Hostel</a>
+                    <li><a href="fee.html">Fee</a></li>
+                    <li><a href="adm.html">Admission Status</a></li>
+            	</ul>
+        	</nav>
+            <div class="search-container">
+                <input id="search-input" type="text" placeholder="Search...">
+                <button onclick="search()">Search</button>
+            </div>
+
+        </div>
+            <div><img src="images\badge_two.png"></div> 
+    </header>
+     <main>
+        <section>
+            <div class="container">
+                <img src="images\f4.jpg" id="currentImage" class="animate">
+                <button class="prevButton" onclick="changeImage(-1)"></button>
+                <button class="nextButton" onclick="changeImage(1)"></button>
+            </div>
+            <script src="script\index.js"></script>
+        </section>
+
+     	<section id="home">
+           <div class="message">
+                <div id="text">
+                    <h2>Welcome to University of Health Science</h2>
+                        <p>Welcome to UHS, where the pursuit of knowledge meets the passion for health science excellence. At our esteemed institution, we are dedicated to nurturing the next generation of healthcare leaders, innovators, and experts. Here, students embark on a transformative journey guided by distinguished faculty, cutting-edge research, and state-of-the-art facilities. Whether you aspire to heal communities, push the boundaries of medical research, or drive advancements in healthcare technology, UHS provides the platform for your aspirations to soar. Join a vibrant community of scholars who are committed to making a positive impact on global health outcomes. Explore our comprehensive curriculum, engage in hands-on learning experiences, and collaborate with peers who share your dedication to advancing the field of health science. Discover endless opportunities for growth, discovery, and impact at University of Health Science. Your journey to shaping the future of healthcare starts here.</p>
+                </div>
+                <img src="images/f5.jpg" alt="event1image" style="width:100%; height: 500px;">
+           </div>
+
+
+            
+            		<!-- events -->
+            <div class="event">
+                <h2 style="text-align: center;font-size: 50px; font-weight: bolder;">EVENTS</h2>
+                	<div class="events">
+                		<div id="event_one">
+                    		<h3>Health Expo and Wellness Fair June,24,2024</h3>
+                            <img src="images\event_1.jpeg" alt="event3image">
+                    		<p>The university hosts an annual Health Expo and Wellness Fair, bringing together students, faculty, staff, and the local community to promote health and well-being. The event features interactive exhibits, health screenings, fitness demonstrations, nutrition workshops, and talks by healthcare professionals. Students from various health sciences disciplines showcase their research projects and community outreach initiatives, highlighting the university's commitment to promoting healthy lifestyles and preventive care.</p>
+                    	</div>
+                    	<div id="event_two">
+                    		<h3>Simulation-Based Training Workshops: Upcoming</h3>
+                    		<img src="images\even2.jpeg" alt="event3image">
+                    		<p>The university organizes simulation-based training workshops for students enrolled in health sciences programs such as nursing, medicine, pharmacy, and allied health professions. These workshops provide hands-on experience using high-fidelity simulation equipment and virtual reality technology to simulate real-life clinical scenarios. Students practice critical skills, decision-making, and teamwork in a safe and controlled environment, preparing them for clinical rotations and future healthcare careers.</p>
+                		</div>
+                    	<div id="event_three">
+                    		<h3>Interdisciplinary Research Symposium: Upcoming</h3>
+                            <img src="images\event_3.png" alt="event3image">
+                    		<p>The university hosts an interdisciplinary research symposium focused on health sciences, where faculty and students present their latest research findings and collaborate on innovative projects. The symposium covers a wide range of topics including biomedical research, public health interventions, healthcare policy, and clinical innovations. It fosters collaboration between different departments and research centers within the university, as well as with external partners in the healthcare industry and academia, driving advancements in healthcare knowledge and practice.</p>
+                    	</div>
+                 	</div>
+                
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about">
+                <div id="text_one">
+                   <h3>Mission</h3>
+                        <p>The University of Health Sciences envisions a world where healthcare is accessible, equitable, and of the highest quality for all individuals. Through education, research, and service, we strive to empower healthcare professionals to lead with compassion, integrity, and innovation, shaping the future of global health.</p>
+            </div>
+                <div id="text_two">
+                    <h3>Vision</h3>
+                        <p>Our mission at the University of Health Sciences is to educate and inspire the next generation of healthcare leaders. We are committed to providing exemplary education, conducting groundbreaking research, and serving our communities with excellence. Through interdisciplinary collaboration and a focus on lifelong learning, we aim to advance healthcare practices and address the evolving needs of society</p>
+                </div>
+                <div id="text_three">
+                    <h3>Leadership Team</h3>
+                        <p>Dr. Andrews Cosmos - President: With a background in healthcare administration and a passion for education, He leads the university with vision and dedication.<br>
+                        Dr. Jonathan Chen - Provost: An esteemed researcher and educator, Oversees academic affairs and ensures the quality and relevance of educational programs.
+                        Ms. Sarah Johnson - Vice President of Operations: With her expertise in organizational management, Ms. Johnson ensures the efficient functioning of the university's operations and infrastructure.
+                        Dr. Michael Thompson - Dean of the School of Medicine: Dr. Thompson brings extensive clinical experience and academic leadership to his role, guiding the development of innovative medical education programs.<br>
+                        Dr. Emily Rodriguez - Dean of the School of Nursing: A seasoned nurse educator, Dr. Rodriguez leads the nursing school with a focus on excellence in nursing practice, education, and research</p>
+                </div>
+                <div id="text_four">
+                    <h3>History</h3>
+                        <p>The University of Health Sciences was founded in 2014 with a vision to address the growing need for skilled healthcare professionals. Originally established as a small institution offering medical education, it has since expanded its programs to include nursing, public health, allied health sciences, and interdisciplinary research. Over the years, the university has earned a reputation for excellence in education, research, and community service, attracting students and faculty from diverse backgrounds and contributing to advancements in healthcare regionally and globally. Today, the University of Health Sciences continues to uphold its commitment to training compassionate and competent healthcare professionals while remaining at the forefront of healthcare innovation and advocacy.Our institution was founded in 2014, and since then, we have been dedicated to academic excellence, research, and community engagement.<br>
+                        The University of Health Sciences stands as a beacon of knowledge and innovation in the realm of healthcare education. With a commitment to excellence, it cultivates the next generation of healthcare professionals, equipping them with the skills, knowledge, and compassion needed to make a meaningful impact in the lives of individuals and communities. Through cutting-edge research, interdisciplinary collaboration, and a dedication to serving humanity, the university is at the forefront of advancing healthcare practices and improving global well-being</p>
+                </div>
+        </section>
+        <section id="academics">
+            <div>
+                <h2>Academics</h2>
+                <h3 style="text-align:center; font-weight: bolder; background-color: #000000; border: 3px solid deepskyblue;">Schools and Colleges</h3>
+                    <div class="school">
+                    <div class="program" id="medical">
+                        <h4>School of Medical Science</h4>
+                        <ul>
+                            <li>Bsc.Medicine</li>
+                            <li>Bsc.Physician Assistance Studies</li>
+                        </ul>
+                    </div>
+                    <div class="program" id="allied">
+                        <h4>School of Allied Health</h4>
+                        <ul>
+                            <li>Clinical Nutrition & Dietetics</li>
+                            <li>Sport Science</li>
+                            <li>Nursing</li>
+                        </ul>
+                    </div>
+                    <div class="program" id="technological">
+                        <h4>School of Technological Health</h4>
+                        <ul>
+                            <li>Bsc. Health Information Management</li>
+                            <li>Doctor of Optometry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section id="admissions">
+            <h2>Admissions</h2>
+            <p>Join our diverse community of students and scholars at University of Health Sciences.</p>
+            <h3 style="color: #000000;">Admissions Requirement</h3>
+            <div class="about">
+                <div id="adm_one">
+                    <h5>CANDIDATES WITH WASSCE/SSSCE</h5>
+                        <p>Minimum/General Entry Requirements</p>
+                            <p>An applicant for admission to a degree programme in the University must have CREDIT
+                            passes (A1 - C6 in WASSCE and A – D in SSSCE) in the THREE WASSCE/SSSCE Core 
+                            Subjects (English Language, Mathematics, and Integrated Science), and CREDIT passes in 
+                            THREE WASSCE/SSSCE Elective Subjects or its equivalent relevant to the chosen programme
+                            with aggregate 24 or better.
+                            It is worth noting that the THREE Core Subjects are prerequisite for all Programmes of study at our University</p>
+                </div>
+                <div id="adm_two">
+                        <h5>GCE/IGCSE (CAMBRIDGE) ‘A’ & ‘O’LEVELS/MATURE APPLICANTS</h5>
+                            <p>Holders of GCE/IGCSE must have FIVE credits at the ‘O’ Level including English Language 
+                            and Mathematics (or its approved equivalent), plus passes in at least THREE (3) subjects at 
+                            the Advanced Level/Three Credits in the case of mature applicants. In addition, the 
+                            applicant must fulfil the appropriate Faculty or Departmental requirements.</p>
+                </div>
+                <div id="adm_three">
+                    <h5>GENERAL BUSINESS CERTIFICATE EXAMINATION (GBCE)/ ADVANCED BUSINESS CERTIFICATE EXAMINATION (ABCE)</h5>
+                        <p>ABCE and GBCE are both needed to qualify an applicant for a programme.
+                            Holders of GBCE must have passes in THREE Compulsory Subjects including English 
+                            Language and passes in THREE Elective Subjects including Business Mathematics.
+                            Holders ABCE must have passes in THREE Compulsory Subjects plus THREE (3) Optional 
+                            Subjects relevant to the Programme of study.</p> 
+                </div>
+            </div>
+            <div class="about">
+                <div id="adm_two">
+                    <h5>INTERNATIONAL BACCALAUREATE (IB)</h5>
+                        <p>Holders of International Baccalaureate (IB) should have a minimum of grade 4 at the 
+                            Higher Level (HL) in Three (3) Subjects relevant to the Programme of choice and minimum 7 of grade 5 in Chemistry for Health and Allied Sciences. For Engineering, at least grade 5 at the Higher level (HL) in Mathematics.<br> In addition, one must have a minimum of grade 4 in English Language and Mathematics at the Standard Level (SL) and at least grade C in a Science subject at the IGCSE</p>
+                </div>
+                <div id="adm_three">
+                    <h5>AMERICAN HIGH SCHOOL GRADE 12</h5>
+                        <p>An applicant for admission to a degree programme in the University of Health Science 
+                            must have a Final Grade Point of at least 3.0. For admission 
+                            to the University School of Medicine and Dentistry, an applicant must have a Final Grade 
+                            Point of at least 3.25. Admissions will be to the Year 1</p>.
+                </div>
+                <div id="adm_one">
+                    <h5>OTHER RELEVANT INFORMATION</h5>
+                        <p>(a) Ghanaian/Other Applicants with Foreign Results/Certificate 
+                            The University shall request an evaluation of results/Certificate other than those mentioned above, (a) to (f), from the Ghana Tertiary Commission (GTEC) and/or other International Credential Evaluation Agency to facilitate the determination of the suitability of the applicant for admission.<br>
+                            (b) Applicants from French Speaking Countries must provide a minimum of one-year English Proficiency Certificate.<br>
+                            (c) Documents not in English should be accompanied by accredited translations in English.<br>
+                            (d) Transfer of Applicants
+                            Applicants from other universities (local and international) who are seeking admission to continue their programme are required to submit official transcript, high school results and  a cover letter through the Deputy Registrar, Academic Affairs (admissions@uhs.edu.com), or the International Programmes Office (ipo@uhs.edu.com) to the Head of Department. Proofof English proficiency and English translation of the transcript must be added where 
+                            necessary</p>
+                </div>
+            </div>
+        </section>
+        <section id="campus">
+            <h2>Campus Life</h2>
+            <h3>Student Organizations</h3>
+            <p>Get involved in our vibrant campus community through student clubs and organizations.</p>
+            <div class="campus">
+                <p>Campus life at UHS, the University of Health Sciences, is a vibrant tapestry of academic rigor and communal spirit. As students traverse the corridors, the air hums with the anticipation of discovery and the pursuit of excellence in healthcare education.</p>
+                <img src="images\hall_5.png" alt="Lecture Hall">
+                <p>From bustling lecture halls where knowledge flows freely to serene study nooks tucked away in the library, every corner resonates with the determination to make a difference in the world of health.</p>
+                <img src="images\campus_six.jpg" alt="Library Study Nook">
+                <p>Beyond academics, the campus pulses with diverse extracurricular activities, from health awareness campaigns to sports tournaments, fostering holistic growth and camaraderie among future healthcare professionals.</p>
+                <img src="images\campus_4.jpg" alt="Health Awareness Campaign">
+                <p>In this dynamic environment, friendships are forged, ideas are incubated, and the seeds of lifelong learning are sown, enriching the journey of every UHS student.</p>
+                <img src="images\campus_zero.jpg" alt="Students in Discussion">
+            </div>
+        </section>
+        <section id="contact" class="con">
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <h3>General Information Get in touch.</h3>
+                <p>University of Health Science<br>534 University Avenue<br>Tarkwa, Ghana<br>
+                    <a href="tel: +233532627105">Hot Line 1: (+233) 532627105 </a><br>
+                    <a href="tel: +233598988900">Hot line 2 (+233) 598988900</a><br>
+                    <a href="mailto:info@uhs.edu">Email: info@uhs.edu</a>
+                </p>
+            </div>
+        <div class="contact">
+            <img src="images\award_one.jpeg">
+            <p><strong>Global Impact Awards</strong> </p>
+        </div>
+            <div class="contact">
+            <img src="images\award_two.jpeg">
+            <p><strong>Clinical Training Awards</strong></p>
+        </div>
+            <div class="contact">
+            <img src="images\award_three.jpeg">
+            <p><strong>Research Excellence Awards</p>
+        </div>
+        </section>
+
+    </main>
+  <!--footer -->
+  	<footer id="page-footer">
+        <div>
+            <h2>Connect with us</h2>
+            <ul class="social">
+                <li><a class="youtube" href="https://www.youtube.com/channel/UCZZJK0YyjaHlEiNIGAS7FfQ">YouTube</a></li>
+                <li><a class="twitter" href="https://twitter.com/@anero_calculus">Twitter</a></li>
+                <li><a class="facebook" href="https://www.facebook.com/andresanero.decalculus/">Facebook</a></li>
+                <li><a class="tiktok" href="https://www.tiktok.com/@universityhealthsciences">TikTok</a></li>
+                <li><a class="linkedin" href="https://linkedin.com/in/andrews-baidoo-b32272209">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div id="footer-links">
+            <ul>
+                <li class="copyright">© University of Health Sciences 2024</li>
+                <li><a href="mailto:info@uhs.edu">Contact us</a></li>
+                <li><a href="#www.uhs.edu.com/privacy-policy">Privacy policy</a></li>
+                <li><a href="#cookie-settings">Cookie settings</a></li>
+                <li><a href="#www.uhs.edu.com/accessibility">Accessibility Statement</a></li>
+                <li><a href="index.html">Back To Top</li>
+                <li><a href="team.html">Board</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
